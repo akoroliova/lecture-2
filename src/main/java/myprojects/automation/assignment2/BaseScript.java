@@ -1,5 +1,6 @@
 package myprojects.automation.assignment2;
 
+import com.gargoylesoftware.htmlunit.WebAssert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -21,7 +22,7 @@ public abstract class BaseScript {
 
     /**
      *
-     * Method of Chrome driver initialization.
+     * Method of Chrome driver initialization (in fullscreen mode).
      */
 
     public static WebDriver initChromeDriver() {

@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 
-public class CheckMainMenuTest extends BaseScript{
+public class CheckMainMenuTestIncomplete extends BaseScript{
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -37,21 +37,19 @@ public class CheckMainMenuTest extends BaseScript{
         }
 
         //Кликнуть на каждом видимом пункте главного меню (Dashboard, Заказы, Каталог, Клиенты...) для открытия соответствующего раздела
-        //find user icon and click on it:
-        //WebElement userIcon = driver.findElement(By.xpath("//*[@id=\"employee_infos\"]/a/span/img"));
-        //userIcon.click();
-
+        WebElement dashbLink1 = driver.findElement(By.id("subtab-AdminParentOrders"));
+        dashbLink1.click();
 
         //Вывести в консоль заголовок открытого раздела.
-        //List<WebElement> resultList = driver.findElements(By.className("b_algo"));
-        //вывести в командную строку кол-во найденных элементов списка
-        //System.out.println(resultList.size());
+        WebElement dashbLink2 = driver.findElement(By.id("shopping_basket"));
+        System.out.println("Заголовок открытого раздела - " + (dashbLink2.getText()));
+
 
 
         //Выполнить обновление (рефреш) страницы
 
 
-        // проверить, что пользователь остается в том же разделе после перезагрузки страницы.
+        // проверить, что пользователь остается в том же разделе после перезагрузки страницы. https://stackoverflow.com/questions/24777134/selenium-after-launching-a-website-how-could-we-check-if-the-right-page-is-laun
         //Assert.assertEquals(loggedInUser.getText(),"PAVEL007");
         //or
         //driver.getSource().contains("a string");
